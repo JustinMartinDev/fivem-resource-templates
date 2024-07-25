@@ -15,7 +15,7 @@ with Javascript resources in FiveM.
 
 ## Foreword
 
-This boilerplate is based off [TypeScript boilerplate](https://github.com/JustinMartinDev/fivem-resource-templates/blob/typescript) himself based off this [boilerplate](https://depfu.com/github/project-error/fivem-typescript-boilerplate)
+This boilerplate is based off [TypeScript boilerplate](https://github.com/JustinMartinDev/fivem-resource-templates/blob/typescript/vanilla) himself based off this [boilerplate](https://depfu.com/github/project-error/fivem-typescript-boilerplate)
 
 ## Requirements
 
