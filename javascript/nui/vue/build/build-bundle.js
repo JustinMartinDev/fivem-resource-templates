@@ -1,20 +1,26 @@
 const esbuild = require("esbuild");
+const { existsSync } = require("fs");
 
 const IS_WATCH_MODE = process.env.IS_WATCH_MODE;
 
-const TARGET_ENTRIES = [
-  {
+const TARGET_ENTRIES = [];
+
+if (existsSync("server/server.js")) {
+  TARGET_ENTRIES.push({
     target: "node16",
     entryPoints: ["server/server.ts"],
     platform: "node",
     outfile: "./dist/server/server.js",
-  },
-  {
+  });
+}
+
+if (existsSync("client/client.js")) {
+  TARGET_ENTRIES.push({
     target: "es2020",
     entryPoints: ["client/client.ts"],
     outfile: "./dist/client/client.js",
-  },
-];
+  });
+}
 
 const buildBundle = async () => {
   try {

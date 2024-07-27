@@ -5,6 +5,7 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "module": "CommonJS",
+    "skipLibCheck": true,
     "types": ["@citizenfx/client", "@types/node"],
     "lib": ["ES2020"]
   },

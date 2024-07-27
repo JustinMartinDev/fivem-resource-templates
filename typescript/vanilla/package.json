@@ -5,18 +5,19 @@
   "author": "<author>",
   "main": "index.js",
   "scripts": {
-    "build": "npm run clearbuild && npm run typecheck && node build/build-bundle.js",
-    "clearbuild": "rimraf ./dist",
-    "typecheck": "tsc --noEmit -p client/tsconfig.json && tsc --noEmit -p server/tsconfig.json",
-    "watch": "npm run clearbuild && cross-env IS_WATCH_MODE=1 node build/build-bundle.js"
+    "prebuild": "npm run clear-build && npm run type-check",
+    "build": "node tools/build-bundle.js",
+    "clear-build": "rimraf ./dist",
+    "type-check": "node ./tools/type-check.js",
+    "watch": "cross-env IS_WATCH_MODE=1 npm run build"
   },
   "devDependencies": {
-    "@citizenfx/client": "^2.0.6063-1",
-    "@citizenfx/server": "^2.0.6063-1",
-    "@types/node": "^20.10.5",
+    "@citizenfx/client": "^2.0.9073-1",
+    "@citizenfx/server": "^2.0.9073-1",
+    "@types/node": "^20.14.12",
     "cross-env": "^7.0.3",
-    "esbuild": "^0.19.10",
-    "rimraf": "^5.0.1",
-    "typescript": "^5.3.3"
+    "esbuild": "^0.23.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.5.4"
   }
 }

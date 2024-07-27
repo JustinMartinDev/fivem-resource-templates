@@ -3,26 +3,28 @@ const { existsSync } = require("fs");
 
 const IS_WATCH_MODE = process.env.IS_WATCH_MODE;
 
+console.log("[ESBuild] Building project...");
+
 const TARGET_ENTRIES = [];
 
-if (existsSync("server/server.js")) {
+if (existsSync("server/server.ts")) {
   TARGET_ENTRIES.push({
     name: "server",
     esbuild: {
       target: "node16",
-      entryPoints: ["server/server.js"],
+      entryPoints: ["server/server.ts"],
       platform: "node",
       outfile: "./dist/server/server.js",
     },
   });
 }
 
-if (existsSync("client/client.js")) {
+if (existsSync("client/client.ts")) {
   TARGET_ENTRIES.push({
     name: "client",
     esbuild: {
       target: "es2020",
-      entryPoints: ["client/client.js"],
+      entryPoints: ["client/client.ts"],
       outfile: "./dist/client/client.js",
     },
   });
@@ -48,6 +50,9 @@ const buildBundle = async () => {
           `[ESBuild Watch] (${targetOpts.name}) Watching for changes...`
         );
         await context.watch();
+      } else {
+        await context.rebuild();
+        console.log(`[ESBuild] Done building ${targetOpts.name}\n`);
       }
     }
   } catch (e) {
@@ -57,4 +62,6 @@ const buildBundle = async () => {
   }
 };
 
-buildBundle().catch(() => process.exit(1));
+buildBundle()
+  .catch(() => process.exit(1))
+  .then(() => process.exit(0));
