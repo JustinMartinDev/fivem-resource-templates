@@ -37,9 +37,9 @@ changes to be reflected in-game_
 
 ### Entry Points
 
-**Client** - `./client/client.ts`
+**Client** - `./client/client.js`
 
-**Server** - `./server/server.ts`
+**Server** - `./server/server.js`
 
 ## Production Build
 

@@ -5,13 +5,13 @@ const IS_WATCH_MODE = process.env.IS_WATCH_MODE;
 const TARGET_ENTRIES = [
   {
     target: "node16",
-    entryPoints: ["server/server.ts"],
+    entryPoints: ["server/server.js"],
     platform: "node",
     outfile: "./dist/server/server.js",
   },
   {
     target: "es2020",
-    entryPoints: ["client/client.ts"],
+    entryPoints: ["client/client.js"],
     outfile: "./dist/client/client.js",
   },
 ];

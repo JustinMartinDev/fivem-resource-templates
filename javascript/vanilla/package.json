@@ -1,12 +1,12 @@
 {
-  "name": "fivem-ts-boilerplate",
+  "name": "<res>",
   "version": "1.0.0",
-  "description": "A boilerplate for TypeScript in FiveM",
+  "description": "<description>",
+  "author": "<author>",
   "main": "index.js",
   "scripts": {
     "watch": "cross-env IS_WATCH_MODE=1 node build/build-bundle.js"
   },
-  "author": "Project Error & PheniXos",
   "devDependencies": {
     "cross-env": "^7.0.3",
     "esbuild": "^0.19.10"

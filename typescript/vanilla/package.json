@@ -1,7 +1,8 @@
 {
-  "name": "fivem-ts-boilerplate",
-  "version": "2.0.0",
-  "description": "A boilerplate for TypeScript in FiveM",
+  "name": "<res>",
+  "version": "1.0.0",
+  "description": "<description>",
+  "author": "<author>",
   "main": "index.js",
   "scripts": {
     "build": "npm run clearbuild && npm run typecheck && node build/build-bundle.js",
@@ -9,8 +10,6 @@
     "typecheck": "tsc --noEmit -p client/tsconfig.json && tsc --noEmit -p server/tsconfig.json",
     "watch": "npm run clearbuild && cross-env IS_WATCH_MODE=1 node build/build-bundle.js"
   },
-  "author": "Project Error",
-  "license": "MIT",
   "devDependencies": {
     "@citizenfx/client": "^2.0.6063-1",
     "@citizenfx/server": "^2.0.6063-1",

@@ -1,6 +1,11 @@
 fx_version 'cerulean'
-name 'FiveM Javascript Boilerplate'
-author 'Project Error'
+
+name '<res>'
+author '<author>'
+description '<description>'
+
+version '1.0.0'
+
 game 'gta5'
 
 server_script 'dist/server/**/*.js'
