@@ -1,8 +1,7 @@
-import { myRandomData } from "./MyOther.client";
+import "nui.ts";
 
-on('onResourceStart', (resName: string) => {
+on("onResourceStart", (resName: string) => {
   if (resName === GetCurrentResourceName()) {
-    console.log(myRandomData)
-    console.log('TypeScript boilerplate started!')
+    console.log("TypeScript boilerplate started!");
   }
-})
+});

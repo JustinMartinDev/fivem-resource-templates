@@ -11,15 +11,6 @@
 - Node > v16
 - Yarn
 
-**Install Dependencies**
-
-Navigate into the newly cloned folder and execute
-the following command, to install dependencies.
-
-```sh
-npm i
-```
-
 ## Development
 
 ### Hot Building
@@ -29,7 +20,7 @@ a `watch` script that will automatically hot rebuild on any
 change within the `client` or `server` directories.
 
 ```sh
-npm run watch
+yarn watch
 ```
 
 _This script still requires you restart the resource for the
@@ -41,6 +32,11 @@ changes to be reflected in-game_
 
 **Server** - `./server/server.ts`
 
+### Nui
+
+Nui is available through a react application you can find in `web` folder.
+The file `client/nui.ts` contain `RegisterNUICallback` method, which work like the lua implementation to avoid complexity.
+
 ## Production Build
 
 Once you have completed the development phase of your resource,
@@ -48,35 +44,14 @@ you must create an optimized & minimized production build, using
 the `build` script.
 
 ```sh
-npm run build
-```
-
-### Automatic Builds (Optional)
-
-_This is not recommended as the embedded version of yarn is
-ocassionally prone to performance and environment problems. We
-highly recomend, you manually run the build script_
-
-If desired, the `fxmanifest.lua` can be setup to allow for
-FXServer to automatically build on resource start. This utilizes
-the embedded `yarn` & `webpack` default resources.
-
-To enable this, add the following to your `fxmanifest.lua`
-
-```lua
-dependency {
-    'yarn',
-    'webpack'
-}
-
-webpack_config 'webpack.config.js'
+yarn build
 ```
 
 ## Client commands
 
-| cmd | args | description | usage |
-| --- | ---- | ----------- | ----- |
-|     |      |             |       |
+| cmd       | args | description                                 | usage      |
+| --------- | ---- | ------------------------------------------- | ---------- |
+| show-nui  | N/A  | display the Nui window in client game       | `show-nui` |
 
 ## Server commands
 
