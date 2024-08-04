@@ -1,7 +1,7 @@
 <h1 align="center">FiveM TypeScript Resource Boilerplate</h1>
 
 <div align="center">
-This is a simple boilerplate for getting started with TypeScript game-scripts, in FiveM.
+This is a simple boilerplate for getting started with TypeScript game-scripts, with Nui as Vue app in FiveM.
 </div>
 
 <div align="center">
@@ -12,9 +12,6 @@ This repository is a basic boilerplate for getting started
 with TypeScript resources in FiveM. This boilerplate only comes with
 development dependencies needed for FiveM-centered TypeScript transpilation, the rest
 is up to you.
-
-_Note: This boilerplate is targeting TypeScript in context of game-scripts,
-if you wish to use TypeScript in NUI, take a look at our other [boilerplate](https://github.com/project-error/fivem-react-boilerplate-lua)_
 
 ## Foreword
 
@@ -41,7 +38,7 @@ Navigate into the newly cloned folder and execute
 the following command, to install dependencies.
 
 ```sh
-npm i
+pnpm i
 ```
 
 ## Development
@@ -50,10 +47,10 @@ npm i
 
 While developing your resource, this boilerplate offers
 a `watch` script that will automatically hot rebuild on any
-change within the `client` or `server` directories.
+change within the `client`, `server` or `web` directories.
 
 ```sh
-npm run watch
+pnpm watch
 ```
 
 _This script still requires you restart the resource for the
@@ -61,9 +58,9 @@ changes to be reflected in-game_
 
 ### Entry Points
 
-**Client** - `./client/client.ts`
+**Client** - `./client/src/client.ts`
 
-**Server** - `./server/server.ts`
+**Server** - `./server/src/server.ts`
 
 ## Production Build
 
@@ -72,33 +69,5 @@ you must create an optimized & minimized production build, using
 the `build` script.
 
 ```sh
-npm run build
-```
-
-## Version < 2.0.0
-
-Version 2.0.0 introduced ESBuild as the primary bundler, removing
-the option for automatic builds through the embedded FXServer webpack builder.
-
-This documentation is preserved for legacy purposes.
-
-### Automatic Builds (Optional)
-
-_This is not recommended as the embedded version of yarn is
-ocassionally prone to performance and environment problems. We
-highly recomend, you manually run the build script_
-
-If desired, the `fxmanifest.lua` can be setup to allow for
-FXServer to automatically build on resource start. This utilizes
-the embedded `yarn` & `webpack` default resources.
-
-To enable this, add the following to your `fxmanifest.lua`
-
-```lua
-dependency {
-    'yarn',
-    'webpack'
-}
-
-webpack_config 'webpack.config.js'
+pnpm build
 ```

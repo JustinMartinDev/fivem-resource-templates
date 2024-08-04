@@ -1,0 +1,21 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "scripts": {
+    "prebuild": "rimraf ./dist",
+    "--------- BUILD ---------": "--------- BUILD ---------",
+    "build": "tsc --build",
+    "--------- WATCH ---------": "--------- WATCH ---------",
+    "watch": "tsc --watch"
+  },
+  "devDependencies": {
+    "@citizenfx/client": "^2.0.9073-1",
+    "@types/node": "^20.14.12",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.5.4"
+  },
+  "engines": {
+    "node": ">=16",
+    "pnpm": ">=7"
+  }
+}
