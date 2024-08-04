@@ -1,4 +1,4 @@
-<h1 align="center">FiveM TypeScript Resource Boilerplate</h1>
+<h1 align="center">FiveM TypeScript/Nui-Vue Resource Boilerplate</h1>
 
 <div align="center">
 This is a simple boilerplate for getting started with TypeScript game-scripts, with Nui as Vue app in FiveM.
@@ -38,7 +38,7 @@ Navigate into the newly cloned folder and execute
 the following command, to install dependencies.
 
 ```sh
-pnpm i
+pnpm install
 ```
 
 ## Development

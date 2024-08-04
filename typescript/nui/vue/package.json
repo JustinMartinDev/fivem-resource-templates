@@ -5,7 +5,7 @@
   "author": "<author>",
   "scripts": {
     "clean": "pnpm --recursive clean",
-    "clean:all": "rm -rf node_modules && pnpm --recursive clean:all",
+    "clean:all": "rimraf node_modules && pnpm --recursive clean:all",
     "--------- BUILD ---------": "--------- BUILD ---------",
     "build:client": "pnpm --filter=client build",
     "build:server": "pnpm --filter=server build",
@@ -18,7 +18,8 @@
     "watch": "concurrently \"pnpm:watch:*\""
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "rimraf": "^6.0.1"
   },
   "engines": {
     "node": ">=16",

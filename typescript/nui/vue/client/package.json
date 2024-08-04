@@ -2,7 +2,8 @@
   "name": "client",
   "version": "1.0.0",
   "scripts": {
-    "prebuild": "rimraf ./dist",
+    "clean": "rm -rf ./dist && rm -rf ./node_modules",
+    "prebuild": "rm -rf ./dist",
     "--------- BUILD ---------": "--------- BUILD ---------",
     "build": "tsc --build",
     "--------- WATCH ---------": "--------- WATCH ---------",
@@ -11,7 +12,6 @@
   "devDependencies": {
     "@citizenfx/client": "^2.0.9073-1",
     "@types/node": "^20.14.12",
-    "rimraf": "^6.0.1",
     "typescript": "^5.5.4"
   },
   "engines": {

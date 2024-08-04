@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "clean": "rm -rf /dist && rm -rf ./node_modules",
     "dev": "vite",
     "dev:game": "vite build --watch",
     "build": "tsc && vite build",
