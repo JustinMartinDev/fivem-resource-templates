@@ -25,7 +25,7 @@ in the greater NPM ecosystem.
 ## Requirements
 
 - Node > v16
-- Yarn
+- Pnpm
 
 ## Getting Started
 
