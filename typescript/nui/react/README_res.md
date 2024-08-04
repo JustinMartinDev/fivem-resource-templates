@@ -9,7 +9,7 @@
 ## Requirements
 
 - Node > v16
-- Yarn
+- Pnpm
 
 ## Development
 
@@ -17,10 +17,10 @@
 
 While developing your resource, this boilerplate offers
 a `watch` script that will automatically hot rebuild on any
-change within the `client` or `server` directories.
+change within the `client`, `server` or `web` directories.
 
 ```sh
-yarn watch
+pnpm watch
 ```
 
 _This script still requires you restart the resource for the
@@ -44,14 +44,14 @@ you must create an optimized & minimized production build, using
 the `build` script.
 
 ```sh
-yarn build
+pnpm build
 ```
 
 ## Client commands
 
-| cmd       | args | description                                 | usage      |
-| --------- | ---- | ------------------------------------------- | ---------- |
-| show-nui  | N/A  | display the Nui window in client game       | `show-nui` |
+| cmd      | args | description                           | usage      |
+| -------- | ---- | ------------------------------------- | ---------- |
+| show-nui | N/A  | display the Nui window in client game | `show-nui` |
 
 ## Server commands
 
