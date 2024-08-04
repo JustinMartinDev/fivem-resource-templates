@@ -1,35 +1,58 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from "react";
+import "./App.css";
+import { fetchNui } from "./utils/fetchNui";
 
-function App() {
-  const [count, setCount] = useState(0)
+window.mockTriggerNuiEvent({ action: "setVisible", data: true });
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+interface ReturnClientDataCompProps {
+  data: unknown;
 }
 
-export default App
+const ReturnClientDataComp: React.FC<ReturnClientDataCompProps> = ({
+  data,
+}) => (
+  <>
+    <h5>Returned Data:</h5>
+    <pre>
+      <code>{JSON.stringify(data, null)}</code>
+    </pre>
+  </>
+);
+
+interface ReturnData {
+  x: number;
+  y: number;
+  z: number;
+}
+
+const App: React.FC = () => {
+  const [clientData, setClientData] = useState<ReturnData | null>(null);
+
+  const handleGetClientData = () => {
+    fetchNui<ReturnData>("getClientData")
+      .then((retData) => {
+        console.log("Got return data from client scripts:");
+        console.dir(retData);
+        setClientData(retData);
+      })
+      .catch((e) => {
+        console.error("Setting mock data due to error", e);
+        setClientData({ x: 500, y: 300, z: 200 });
+      });
+  };
+
+  return (
+    <div className="nui-wrapper">
+      <div className="popup-thing">
+        <div>
+          <h1>This is the NUI Popup!</h1>
+          <p>Exit with the escape key</p>
+          <button onClick={handleGetClientData}>Get Client Data</button>
+          {clientData && <ReturnClientDataComp data={clientData} />}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default App;

@@ -9,6 +9,12 @@ export const RegisterNUICallback = <T = any>(
   on(`__cfx_nui:${name}`, cb);
 };
 
+export const SendReactMessage = (action: string, data: any) =>
+  SendNUIMessage({
+    action,
+    data,
+  });
+
 const toggleNuiFrame = (shouldShow: boolean) => {
   SetNuiFocus(shouldShow, shouldShow);
   //sendReactMessage('setVisible', shouldShow);

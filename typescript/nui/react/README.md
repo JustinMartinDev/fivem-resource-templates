@@ -5,9 +5,7 @@ This is a simple boilerplate for getting started with TypeScript game-scripts, w
 </div>
 
 <div align="center">
-
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/project-error/pe-utils/master/LICENSE)
-
 </div>
 
 This repository is a basic boilerplate for getting started
