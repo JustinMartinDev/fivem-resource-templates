@@ -1,5 +1,5 @@
 on("onResourceStart", (resName: string) => {
   if (resName === GetCurrentResourceName()) {
-    console.log("TypeScript boilerplate started!");
+    console.log("TypeScript/Nui/React client-side boilerplate started!");
   }
 });

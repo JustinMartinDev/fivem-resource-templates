@@ -1,10 +1,7 @@
-<div align="center">
-    <img href="https://projecterror.dev" width="150" src="https://i.tasoagc.dev/c1pD" alt="Material-UI logo" />
-</div>
 <h1 align="center">FiveM TypeScript Resource Boilerplate</h1>
 
 <div align="center">
-This is a simple boilerplate for getting started with TypeScript game-scripts, in FiveM.
+This is a simple boilerplate for getting started with TypeScript game-scripts, with Nui as React app in FiveM.
 </div>
 
 <div align="center">
@@ -17,9 +14,6 @@ This repository is a basic boilerplate for getting started
 with TypeScript resources in FiveM. This boilerplate only comes with
 development dependencies needed for FiveM-centered TypeScript transpilation, the rest
 is up to you.
-
-_Note: This boilerplate is targeting TypeScript in context of game-scripts,
-if you wish to use TypeScript in NUI, take a look at our other [boilerplate](https://github.com/project-error/fivem-react-boilerplate-lua)_
 
 ## Foreword
 

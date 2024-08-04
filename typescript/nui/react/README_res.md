@@ -28,14 +28,14 @@ changes to be reflected in-game_
 
 ### Entry Points
 
-**Client** - `./client/client.ts`
+**Client** - `./client/src/client.ts`
 
-**Server** - `./server/server.ts`
+**Server** - `./server/src/server.ts`
 
 ### Nui
 
 Nui is available through a react application you can find in `web` folder.
-The file `client/nui.ts` contain `RegisterNUICallback` method, which work like the lua implementation to avoid complexity.
+The file `client/src/nui.ts` contain `RegisterNUICallback` method, which work like the lua implementation to avoid complexity.
 
 ## Production Build
 
