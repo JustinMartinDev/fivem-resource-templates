@@ -1,0 +1,5 @@
+# https://nx.dev/more-concepts/folder-structure
+# https://pnpm.io/workspaces
+packages:
+  - "client/"
+  - "server/"

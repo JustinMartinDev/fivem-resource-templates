@@ -5,7 +5,7 @@
   "author": "<author>",
   "scripts": {
     "clean": "pnpm --recursive clean",
-    "clean:all": "rimraf node_modules && pnpm --recursive clean:all",
+    "clean:all": "rm -rf node_modules && pnpm --recursive clean",
     "--------- BUILD ---------": "--------- BUILD ---------",
     "build:client": "pnpm --filter=client build",
     "build:server": "pnpm --filter=server build",

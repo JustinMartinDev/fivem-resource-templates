@@ -5,19 +5,22 @@
   "author": "<author>",
   "main": "index.js",
   "scripts": {
-    "prebuild": "npm run clear-build && npm run type-check",
-    "build": "node tools/build-bundle.js",
-    "clear-build": "rimraf ./dist",
-    "type-check": "node ./tools/type-check.js",
-    "watch": "cross-env IS_WATCH_MODE=1 npm run build"
+    "clean": "pnpm --recursive clean",
+    "clean:all": "rm -rf node_modules && pnpm --recursive clean",
+    "--------- BUILD ---------": "--------- BUILD ---------",
+    "build:client": "pnpm --filter=client build",
+    "build:server": "pnpm --filter=server build",
+    "build": "concurrently \"pnpm:build:*\"",
+    "--------- WATCH ---------": "--------- WATCH ---------",
+    "watch:client": "pnpm --filter=client watch",
+    "watch:server": "pnpm --filter=server watch",
+    "watch": "concurrently \"pnpm:watch:*\""
   },
   "devDependencies": {
-    "@citizenfx/client": "^2.0.9073-1",
-    "@citizenfx/server": "^2.0.9073-1",
-    "@types/node": "^20.14.12",
-    "cross-env": "^7.0.3",
-    "esbuild": "^0.23.0",
-    "rimraf": "^6.0.1",
-    "typescript": "^5.5.4"
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=16",
+    "pnpm": ">=7"
   }
 }
