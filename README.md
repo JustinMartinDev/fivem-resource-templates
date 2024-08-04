@@ -16,13 +16,14 @@ Use `npx create-fivem-resource` to clone your template folder
 
 ## Roadmap
 
-🕑: to do
-🚧: wip
-✅: finished
+- 🕑 to do
+- 🚧 wip
+- 🧪 testing
+- ✅ finished
 
 | Template                 | Status | Link                                                                                               |
 | ------------------------ | ------ | -------------------------------------------------------------------------------------------------- |
-| Typescript - Nui - React | ✅     | [link](https://github.com/JustinMartinDev/fivem-resource-templates/tree/main/typescript/nui/react) |
+| Typescript - Nui - React | 🧪     | [link](https://github.com/JustinMartinDev/fivem-resource-templates/tree/main/typescript/nui/react) |
 | Typescript - Nui - Vue   | 🚧     | [link](https://github.com/JustinMartinDev/fivem-resource-templates/tree/main/typescript/nui/vue)   |
 | Typescript - Vanilla     | 🕑     | [link](https://github.com/JustinMartinDev/fivem-resource-templates/tree/main/typescript/vanilla)   |
 | Javascript - Nui - React | 🕑     | [link](https://github.com/JustinMartinDev/fivem-resource-templates/tree/main/javascript/nui/react) |
