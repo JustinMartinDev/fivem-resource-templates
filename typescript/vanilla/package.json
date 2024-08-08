@@ -1,9 +1,6 @@
 {
-  "name": "<res>",
+  "name": "vinilla-server",
   "version": "1.0.0",
-  "description": "<description>",
-  "author": "<author>",
-  "main": "index.js",
   "scripts": {
     "clean": "pnpm --recursive clean",
     "clean:all": "rm -rf node_modules && pnpm --recursive clean",

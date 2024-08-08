@@ -32,6 +32,8 @@ in the greater NPM ecosystem.
 First clone the repository or use the template option
 and place it within your `resources` folder
 
+Take care root `package.json` and `pnpm-workspace.yaml` should be at root `resources`
+
 **Install Dependencies**
 
 Navigate into the newly cloned folder and execute

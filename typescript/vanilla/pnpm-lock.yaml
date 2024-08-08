@@ -12,7 +12,7 @@ importers:
         specifier: ^8.2.2
         version: 8.2.2
 
-  client:
+  <res>/client:
     devDependencies:
       '@citizenfx/client':
         specifier: ^2.0.9073-1
@@ -24,7 +24,7 @@ importers:
         specifier: ^5.5.4
         version: 5.5.4
 
-  server:
+  <res>/server:
     devDependencies:
       '@citizenfx/server':
         specifier: ^2.0.9073-1
@@ -32,6 +32,12 @@ importers:
       '@types/node':
         specifier: ^20.14.12
         version: 20.14.14
+      typescript:
+        specifier: ^5.5.4
+        version: 5.5.4
+
+  <res>/types:
+    devDependencies:
       typescript:
         specifier: ^5.5.4
         version: 5.5.4
