@@ -1,5 +1,5 @@
 {
-  "name": "vinilla-server",
+  "name": "vanilla-server",
   "version": "1.0.0",
   "scripts": {
     "clean": "pnpm --recursive clean",
