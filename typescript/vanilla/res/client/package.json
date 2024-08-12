@@ -5,14 +5,20 @@
     "clean": "rm -rf ./dist && rm -rf ./node_modules",
     "prebuild": "rm -rf ./dist",
     "--------- BUILD ---------": "--------- BUILD ---------",
-    "build": "tsc --build",
+    "build": "rollup -c",
     "--------- WATCH ---------": "--------- WATCH ---------",
-    "watch": "tsc --watch"
+    "watch": "rollup -c -w"
   },
   "devDependencies": {
-    "@citizenfx/client": "^2.0.9073-1",
-    "@types/node": "^20.14.12",
-    "typescript": "^5.5.4"
+    "@citizenfx/client": "catalog:",
+    "@rollup/plugin-commonjs": "catalog:",
+    "@rollup/plugin-node-resolve": "catalog:",
+    "@rollup/plugin-typescript": "catalog:",
+    "@types/node": "catalog:",
+    "fast-glob": "catalog:",
+    "rollup": "catalog:",
+    "tslib": "catalog:",
+    "typescript": "catalog:"
   },
   "engines": {
     "node": ">=16",

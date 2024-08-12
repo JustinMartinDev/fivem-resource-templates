@@ -4,18 +4,10 @@
   "scripts": {
     "clean": "pnpm --recursive clean",
     "clean:all": "rm -rf node_modules && pnpm --recursive clean",
-    "--------- BUILD ---------": "--------- BUILD ---------",
-    "build:client": "pnpm --filter=client build",
-    "build:server": "pnpm --filter=server build",
-    "build": "concurrently \"pnpm:build:*\"",
-    "--------- WATCH ---------": "--------- WATCH ---------",
-    "watch:client": "pnpm --filter=client watch",
-    "watch:server": "pnpm --filter=server watch",
-    "watch": "concurrently \"pnpm:watch:*\""
+    "build": "pnpm --recursive build",
+    "watch": "pnpm --recursive watch"
   },
-  "devDependencies": {
-    "concurrently": "^8.2.2"
-  },
+  "devDependencies": {},
   "engines": {
     "node": ">=16",
     "pnpm": ">=7"
