@@ -8,5 +8,5 @@ version '1.0.0'
 
 game 'gta5'
 
-server_script 'dist/server/**/*.js'
-client_script 'dist/client/**/*.js'
+server_script 'server/dist/**/*.js'
+client_script 'client/dist/**/*.js'
