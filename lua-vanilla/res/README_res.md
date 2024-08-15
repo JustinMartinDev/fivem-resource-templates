@@ -47,7 +47,3 @@ debugPrint('wow cool string to print', true, someOtherVar)
 | cmd | args | description | usage |
 | --- | ---- | ----------- | ----- |
 |     |      |             |       |
-
-```
-
-```
