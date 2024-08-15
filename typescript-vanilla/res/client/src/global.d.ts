@@ -1,6 +1,5 @@
-import { SpawnmanagerExports } from "@spawnmanager/types"
 // Type the exports const containing all other dependant resources exports
 
 declare var exports: {
-  exports: SpawnmanagerExports
-}
+  test: any;
+};

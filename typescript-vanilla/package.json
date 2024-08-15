@@ -1,5 +1,5 @@
 {
-  "name": "vanilla-server",
+  "name": "typescript-vanilla-server",
   "version": "1.0.0",
   "scripts": {
     "clean": "pnpm --recursive clean",
@@ -9,7 +9,7 @@
   },
   "devDependencies": {},
   "engines": {
-    "node": ">=16",
-    "pnpm": ">=7"
+    "node": ">=18",
+    "pnpm": ">=9.5"
   }
 }

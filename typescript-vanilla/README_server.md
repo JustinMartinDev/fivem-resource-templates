@@ -4,8 +4,8 @@
 
 ## Requirements
 
-- Node > v16
-- Pnpm
+- Node > v18
+- Pnpm > v9.5
 
 ## Development
 

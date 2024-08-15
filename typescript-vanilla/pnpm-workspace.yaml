@@ -17,4 +17,3 @@ catalog:
   '@rollup/plugin-commonjs': ^26.0.1
   '@rollup/plugin-node-resolve': ^15.2.3
   '@rollup/plugin-typescript': ^11.1.6
-  fast-glob: "^3.3.2" #Used to detech all entry files

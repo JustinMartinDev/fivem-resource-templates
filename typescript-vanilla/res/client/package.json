@@ -1,27 +1,27 @@
 {
-  "name": "@res/server",
+  "name": "@res/client",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "clean": "rm -rf ./dist && rm -rf ./node_modules",
     "prebuild": "rm -rf ./dist",
     "--------- BUILD ---------": "--------- BUILD ---------",
-    "build": "tsc --build",
+    "build": "rollup -c",
     "--------- WATCH ---------": "--------- WATCH ---------",
-    "watch": "tsc --watch"
+    "watch": "rollup -c -w"
   },
   "devDependencies": {
-    "@citizenfx/server": "catalog:",
+    "@citizenfx/client": "catalog:",
     "@rollup/plugin-commonjs": "catalog:",
     "@rollup/plugin-node-resolve": "catalog:",
     "@rollup/plugin-typescript": "catalog:",
     "@types/node": "catalog:",
-    "fast-glob": "catalog:",
     "rollup": "catalog:",
     "tslib": "catalog:",
     "typescript": "catalog:"
   },
   "engines": {
-    "node": ">=16",
-    "pnpm": ">=7"
+    "node": ">=18",
+    "pnpm": ">=9.5"
   }
 }
