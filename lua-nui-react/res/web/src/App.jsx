@@ -1,24 +1,12 @@
 import React, { useState } from "react";
 import "./App.css";
-import { debugData } from "../utils/debugData";
-import { fetchNui } from "../utils/fetchNui";
+import { fetchNui } from "./utils/fetchNui";
 
-// This will set the NUI to visible if we are
-// developing in browser
-debugData([
-  {
-    action: "setVisible",
-    data: true,
-  },
-]);
-
-interface ReturnClientDataCompProps {
-  data: unknown;
+if (window.mockTriggerNuiEvent) {
+  window.mockTriggerNuiEvent({ action: "setVisible", data: false });
 }
 
-const ReturnClientDataComp: React.FC<ReturnClientDataCompProps> = ({
-  data,
-}) => (
+const ReturnClientDataComp = ({ data }) => (
   <>
     <h5>Returned Data:</h5>
     <pre>
@@ -27,17 +15,11 @@ const ReturnClientDataComp: React.FC<ReturnClientDataCompProps> = ({
   </>
 );
 
-interface ReturnData {
-  x: number;
-  y: number;
-  z: number;
-}
-
-const App: React.FC = () => {
-  const [clientData, setClientData] = useState<ReturnData | null>(null);
+function App() {
+  const [clientData, setClientData] = useState(null);
 
   const handleGetClientData = () => {
-    fetchNui<ReturnData>("getClientData")
+    fetchNui("getClientData")
       .then((retData) => {
         console.log("Got return data from client scripts:");
         console.dir(retData);
@@ -61,6 +43,6 @@ const App: React.FC = () => {
       </div>
     </div>
   );
-};
+}
 
 export default App;

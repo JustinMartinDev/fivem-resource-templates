@@ -10,12 +10,12 @@ lua54 'yes'
 
 game 'gta5'
 
-ui_page 'web/build/index.html'
-
 client_script 'client/**/*'
 server_script 'server/**/*'
 
+ui_page 'web/dist/index.html'
+
 files {
-  'web/build/index.html',
-  'web/build/**/*',
+  'web/dist/index.html',
+  'web/dist/**/*',
 }

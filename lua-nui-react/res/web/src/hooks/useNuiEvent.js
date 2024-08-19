@@ -1,12 +1,5 @@
-import { MutableRefObject, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { noop } from "../utils/misc";
-
-interface NuiMessageData<T = unknown> {
-  action: string;
-  data: T;
-}
-
-type NuiHandlerSignature<T> = (data: T) => void;
 
 /**
  * A hook that manage events listeners for receiving data from the client scripts
@@ -14,17 +7,14 @@ type NuiHandlerSignature<T> = (data: T) => void;
  * @param handler The callback function that will handle data relayed by this hook
  *
  * @example
- * useNuiEvent<{visibility: true, wasVisible: 'something'}>('setVisible', (data) => {
+ * useNuiEvent('setVisible', (data) => {
  *   // whatever logic you want
  * })
  *
  **/
 
-export const useNuiEvent = <T = unknown>(
-  action: string,
-  handler: (data: T) => void,
-) => {
-  const savedHandler: MutableRefObject<NuiHandlerSignature<T>> = useRef(noop);
+export const useNuiEvent = (action, handler) => {
+  const savedHandler = useRef(noop);
 
   // Make sure we handle for a reactive handler
   useEffect(() => {
@@ -32,7 +22,7 @@ export const useNuiEvent = <T = unknown>(
   }, [handler]);
 
   useEffect(() => {
-    const eventListener = (event: MessageEvent<NuiMessageData<T>>) => {
+    const eventListener = (event) => {
       const { action: eventAction, data } = event.data;
 
       if (savedHandler.current) {
